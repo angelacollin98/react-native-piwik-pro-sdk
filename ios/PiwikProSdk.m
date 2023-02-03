@@ -87,7 +87,7 @@ RCT_REMAP_METHOD(trackException,
     @try {
         [self applyOptionalParameters:options];
         
-        [[PiwikTracker sharedInstance] sendExceptionWithDescription:description isFatal:isFatal];
+        // [[PiwikTracker sharedInstance] sendExceptionWithDescription:description isFatal:isFatal];
         resolve(nil);
     } @catch (NSException *exception) {
         reject(exception.name, exception.reason, nil);
@@ -109,7 +109,7 @@ RCT_REMAP_METHOD(trackSocialInteraction,
     @try {
         [self applyOptionalParameters:options];
         
-        [[PiwikTracker sharedInstance] sendSocialInteractionWithAction:interaction target:options[@"target"] network:network];
+        // [[PiwikTracker sharedInstance] sendSocialInteractionWithAction:interaction target:options[@"target"] network:network];
         resolve(nil);
     } @catch (NSException *exception) {
         reject(exception.name, exception.reason, nil);
